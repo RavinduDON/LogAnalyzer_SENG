@@ -20,16 +20,16 @@ public class Logreader {
                 while(st.hasMoreTokens())
                 {
                     Message message=new Message();
-                    message.date=st.nextToken();
-                    message.time=st.nextToken();
+                    message.setDate(st.nextToken());
+                    message.setTime(st.nextToken());
                     st.nextToken();
                     st.nextToken();
-                    message.type=st.nextToken();
+                    message.setType(st.nextToken());
                     st.nextToken();
-                    message.detail="";
+                    message.setDetail("");
                     while(st.hasMoreTokens())
                     {
-                        message.detail+=st.nextToken();
+                        message.setDetail(message.getDetail()+st.nextToken());
                     }
                     messages.add(message);
                 }

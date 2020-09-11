@@ -9,7 +9,7 @@ public class Errorconfig {
     {
         for(Message message:messages)
         {
-            if(message.type.equals("ERROR"))
+            if(message.getType().equals("ERROR"))
             {
                 errormessages.add(message);
             }
