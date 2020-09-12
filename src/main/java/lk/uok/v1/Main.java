@@ -1,8 +1,8 @@
 package lk.uok.v1;
 
-import FIleHandling.Errorconfig;
-import FIleHandling.Logreader;
-import FIleHandling.Message;
+import lk.uok.v1.FIleHandling.Errorconfig;
+import lk.uok.v1.FIleHandling.Logreader;
+import lk.uok.v1.FIleHandling.Message;
 import java.util.List;
 
 public class Main {

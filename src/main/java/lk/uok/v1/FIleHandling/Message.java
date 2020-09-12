@@ -1,4 +1,4 @@
-package FIleHandling;
+package lk.uok.v1.FIleHandling;
 
 public class Message {
     private String date;
