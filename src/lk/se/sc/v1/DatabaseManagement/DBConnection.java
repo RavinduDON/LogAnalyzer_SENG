@@ -1,11 +1,13 @@
-package DatabaseManagement;
+package lk.se.sc.v1.DatabaseManagement;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class DBConnection {
 
     private static DBConnection dBConnection;
-    private Connection connection;
+    private final Connection connection;
 
     public DBConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
@@ -24,5 +26,6 @@ public class DBConnection {
     public Connection getConnection() {
         return connection;
     }
+
 
 }

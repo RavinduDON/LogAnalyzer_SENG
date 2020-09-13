@@ -1,9 +1,11 @@
-package lk.uok.v1.FIleHandling;
+package lk.se.sc.v1.FIleHandling;
+
+import lk.se.sc.v1.DTO.Message;
 
 import java.io.*;
 import java.util.*;
 
-public class Logreader {
+public class LogReader {
     List<Message> messages=new ArrayList<Message>();
     List<Message> errormessages=new ArrayList<Message>();
 

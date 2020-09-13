@@ -1,17 +1,22 @@
-package lk.uok.v1;
+package lk.se.sc.v1.main;
 
-import lk.uok.v1.FIleHandling.Errorconfig;
-import lk.uok.v1.FIleHandling.Logreader;
-import lk.uok.v1.FIleHandling.Message;
 import java.util.List;
+
+import lk.se.sc.v1.FIleHandling.Errorconfig;
+import lk.se.sc.v1.FIleHandling.LogReader;
+import lk.se.sc.v1.DTO.Message;
 
 public class Main {
 
     public static void main(String[] args) {
 
         //Reading the file and Creating a List of Messages
-        Logreader logreader=new Logreader();
+        LogReader logreader=new LogReader();
         List<Message> messages=logreader.logreader();
+        for (Message message:messages
+        ) {
+            System.out.println(message.getDetail());
+        }
 
         //Sorting out Error Messages
         Errorconfig errorconfig=new Errorconfig();
