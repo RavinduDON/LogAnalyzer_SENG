@@ -1,11 +1,12 @@
-package lk.se.sc.v1.FIleHandling;
+package lk.uok.se.FileHandling;
 
-import lk.se.sc.v1.DTO.Message;
+import lk.uok.se.DTO.Message;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Errorconfig {
-    List<Message> errormessages=new ArrayList<>();
+public class EreorConfig {
+    List<Message> errormessages=new ArrayList<Message>();
 
     public List<Message> findingerrors(List<Message> messages)
     {

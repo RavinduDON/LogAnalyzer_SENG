@@ -1,11 +1,10 @@
-package lk.se.sc.v1.DatabaseManagement;
+package lk.uok.se.DBManagement;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
-
     private static DBConnection dBConnection;
     private final Connection connection;
 

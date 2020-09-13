@@ -1,4 +1,4 @@
-package lk.se.sc.v1.DTO;
+package lk.uok.se.DTO;
 
 public class Message {
     private String date;
@@ -47,4 +47,5 @@ public class Message {
     public void setDetail(String detail) {
         this.detail = detail;
     }
+
 }

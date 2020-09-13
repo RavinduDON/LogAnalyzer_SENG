@@ -1,9 +1,12 @@
-package lk.se.sc.v1.FIleHandling;
+package lk.uok.se.FileHandling;
 
-import lk.se.sc.v1.DTO.Message;
+import lk.uok.se.DTO.Message;
 
-import java.io.*;
-import java.util.*;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class LogReader {
     List<Message> messages=new ArrayList<Message>();
