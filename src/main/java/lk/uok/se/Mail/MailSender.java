@@ -10,9 +10,9 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class MailSender {
-
-    public static void composeMail(String recipient,String errMsg) throws Exception {
+public class MailSender implements MailRepository{
+    @Override
+    public void composeMail(String recipient, String errMsg) throws Exception {
         Properties properties = new Properties();
 
         properties.put("mail.smtp.auth","true");
@@ -31,12 +31,11 @@ public class MailSender {
         Message message=prareMassage(session,myEmail,recipient,errMsg);
 
         Transport.send(message);
-        Alert alert=new Alert(Alert.AlertType.INFORMATION,"Email Successfully Sent", ButtonType.OK);
-        alert.show();
-
+        System.out.println("Email Sent to "+recipient);
     }
 
-    public static Message prareMassage(Session session,String myEmail,String recipiant,String errMsg){
+    @Override
+    public Message prareMassage(Session session, String myEmail, String recipiant, String errMsg) throws Exception {
         try {
             Message message=new MimeMessage(session);
 
@@ -56,4 +55,5 @@ public class MailSender {
         }
         return null;
     }
+
 }
