@@ -41,7 +41,7 @@ public class MailSender implements MailRepository{
 
             message.setFrom(new InternetAddress(myEmail));
             message.setRecipient(Message.RecipientType.TO,new InternetAddress(recipiant));
-            message.setSubject("NAITA Training Contract");
+            message.setSubject("Error Log Details");
             message.setText("Your Training Contract has been registered with NAITA Colombo District office\n" +
 
                     "A copy of certified contract document can be obtained from NAITA Havelock Town Office\n" +

@@ -9,13 +9,13 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class LogReader {
-    List<Message> messages=new ArrayList<Message>();
-    List<Message> errormessages=new ArrayList<Message>();
+    private List<Message> messages=new ArrayList<Message>();
+    private List<Message> errormessages=new ArrayList<Message>();
 
     public List<Message> logreader()
     {
         try{
-            FileReader filereader=new FileReader("/home/charith/Documents/idea.log");
+            FileReader filereader=new FileReader("E:\\UniLectures\\SecondYear\\Software construction\\Assignment2\\LogAnalyzer\\src\\main\\resources\\idea.log");
             Scanner scanner=new Scanner(filereader);
             while (scanner.hasNextLine())
             {
