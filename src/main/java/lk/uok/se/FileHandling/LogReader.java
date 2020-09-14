@@ -15,7 +15,7 @@ public class LogReader {
     public List<Message> logreader()
     {
         try{
-            FileReader filereader=new FileReader("E:\\UniLectures\\SecondYear\\Software construction\\Assignment2\\LogAnalyzer\\src\\main\\resources\\idea.log");
+            FileReader filereader=new FileReader("/home/charith/Desktop/git/src/main/resources/idea.log");
             Scanner scanner=new Scanner(filereader);
             while (scanner.hasNextLine())
             {

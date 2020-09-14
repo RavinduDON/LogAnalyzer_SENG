@@ -1,7 +1,7 @@
 package lk.uok.se.Mail;
 
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
+//import javafx.scene.control.Alert;
+//import javafx.scene.control.ButtonType;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
