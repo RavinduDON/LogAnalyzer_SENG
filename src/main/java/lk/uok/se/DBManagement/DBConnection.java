@@ -14,6 +14,7 @@ public class DBConnection {
 
     }
 
+    //configure database connection
     public static DBConnection getDBConnection() throws ClassNotFoundException, SQLException {
         if (dBConnection == null) {
             dBConnection = new DBConnection();

@@ -10,6 +10,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
         LogReader logReader=new LogReader();
         List<Message> messages=logReader.logreader();
 
