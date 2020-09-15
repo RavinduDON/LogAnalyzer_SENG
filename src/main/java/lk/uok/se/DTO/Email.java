@@ -1,15 +1,15 @@
 package lk.uok.se.DTO;
 
 public class Email {
+    private int id;
     private String address;
-    private String errorMsg;
 
     public Email() {
     }
 
-    public Email(String address, String errorMsg) {
+    public Email(int id, String address) {
+        this.id = id;
         this.address = address;
-        this.errorMsg = errorMsg;
     }
 
     public String getAddress() {
@@ -20,11 +20,11 @@ public class Email {
         this.address = address;
     }
 
-    public String getErrorMsg() {
-        return errorMsg;
+    public int getId() {
+        return id;
     }
 
-    public void setErrorMsg(String errorMsg) {
-        this.errorMsg = errorMsg;
+    public void setId(int id) {
+        this.id = id;
     }
 }
