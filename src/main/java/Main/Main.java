@@ -22,6 +22,6 @@ public class Main {
         filewriter.getaccesseto_file(errormessages);
 
         TimestampReader timestampReader=new TimestampReader();
-        timestampReader.logreader();
+        timestampReader.timestampreader();
     }
 }
