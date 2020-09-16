@@ -10,7 +10,6 @@ import java.util.StringTokenizer;
 
 public class LogReader {
     private List<Message> messages=new ArrayList<Message>();
-    private List<Message> errormessages=new ArrayList<Message>();
 
     public List<Message> logreader()
     {
@@ -21,7 +20,6 @@ public class LogReader {
             {
                 String fullmessage=scanner.nextLine();
                 StringTokenizer st=new StringTokenizer(fullmessage," ,[]");
-
                 while(st.hasMoreTokens())
                 {
                     Message message=new Message();

@@ -11,11 +11,11 @@ public class DBPerformAction implements DBRepository {
     @Override
     public boolean add(Email dto) throws Exception {
         String sql="INSERT into emails values(?,?)";
-        int exuteUpdate=DBUtility.exuteUpdate(sql,dto.getId(),dto.getAddress());
-        int executeUpdate>0){
+        int executeUpdate=DBUtility.exuteUpdate(sql,dto.getId(),dto.getAddress());
+        if (executeUpdate>0){
             return true;
-
-        }else{
+        }
+        else{
             return false;
         }
 
