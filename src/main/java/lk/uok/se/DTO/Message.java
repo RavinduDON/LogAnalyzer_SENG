@@ -1,35 +1,49 @@
 package lk.uok.se.DTO;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Message {
-    private String date;
-    private String time;
+    private SimpleDateFormat datetimeFormatter1 = new SimpleDateFormat("yyyy-MM-dd,hh:mm:ss");
+    private Date date;
+    private Timestamp timestamp;
     private String type;
     private String detail;
 
     public Message() {
     }
 
-    public Message(String date, String time, String type, String detail) {
+    public Message(SimpleDateFormat datetimeFormatter1, Date date, Timestamp timestamp, String time, String type, String detail) {
+        this.datetimeFormatter1 = datetimeFormatter1;
         this.date = date;
-        this.time = time;
+        this.timestamp = timestamp;
         this.type = type;
         this.detail = detail;
     }
 
-    public String getDate() {
+    public SimpleDateFormat getDatetimeFormatter1() {
+        return datetimeFormatter1;
+    }
+
+    public void setDatetimeFormatter1(SimpleDateFormat datetimeFormatter1) {
+        this.datetimeFormatter1 = datetimeFormatter1;
+    }
+
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
-    public String getTime() {
-        return time;
+    public Timestamp getTimestamp() {
+        return timestamp;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
     }
 
     public String getType() {
@@ -47,5 +61,4 @@ public class Message {
     public void setDetail(String detail) {
         this.detail = detail;
     }
-
 }

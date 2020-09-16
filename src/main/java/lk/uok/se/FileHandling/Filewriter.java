@@ -11,8 +11,8 @@ public class Filewriter {
         try {
             FileWriter filewriter = new FileWriter("/home/charith/Desktop/git2/git/src/main/resources/timestamp.txt");
 
-            //Print the last line
-            filewriter.write(errormessages.get(errormessages.size()-1).getDate()+","+errormessages.get(errormessages.size()-1).getTime());
+            //Print the last error date and time
+            filewriter.write(errormessages.get(errormessages.size()-1).getTimestamp().toString());
             filewriter.close();
         } catch (Exception e) {
             System.out.println("An error occurred.");

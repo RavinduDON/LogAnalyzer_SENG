@@ -6,11 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ErrorConfig {
-    private LogReader reader=new LogReader();
-    private List<Message> messages= reader.logreader();
     private List<Message> errormessages=new ArrayList<Message>();
 
-    public List<Message> findingerrors()
+    public List<Message> findingerrors(List<Message> messages)
     {
         for(Message message:messages)
         {

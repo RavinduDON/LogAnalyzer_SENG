@@ -6,6 +6,7 @@ import lk.uok.se.FileHandling.Filewriter;
 import lk.uok.se.FileHandling.LogReader;
 import lk.uok.se.FileHandling.TimestampReader;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 
@@ -16,12 +17,12 @@ public class Main {
         List<Message> messages=logReader.logreader();
 
         ErrorConfig errorConfig=new ErrorConfig();
-        List<Message> errormessages=errorConfig.findingerrors();
+        List<Message> errormessages=errorConfig.findingerrors(messages);
 
         Filewriter filewriter=new Filewriter();
         filewriter.getaccesseto_file(errormessages);
 
         TimestampReader timestampReader=new TimestampReader();
-        timestampReader.timestampreader();
+        Timestamp timestamp=timestampReader.timestampreader();
     }
 }

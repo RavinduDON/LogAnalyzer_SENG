@@ -3,10 +3,9 @@ package lk.uok.se.FileHandling;
 import lk.uok.se.DTO.Message;
 
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.StringTokenizer;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class LogReader {
     private List<Message> messages=new ArrayList<Message>();
@@ -23,8 +22,11 @@ public class LogReader {
                 while(st.hasMoreTokens())
                 {
                     Message message=new Message();
-                    message.setDate(st.nextToken());
-                    message.setTime(st.nextToken());
+                    String str=st.nextToken()+st.nextToken();
+                    SimpleDateFormat datetimeFormatter = new SimpleDateFormat("yyyy-MM-ddhh:mm:ss");
+                    Date date= datetimeFormatter.parse(str);
+                    Timestamp timestamp= new Timestamp(date.getTime());
+                    message.setTimestamp(timestamp);
                     st.nextToken();
                     st.nextToken();
                     message.setType(st.nextToken());
