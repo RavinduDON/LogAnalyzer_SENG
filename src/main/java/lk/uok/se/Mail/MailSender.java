@@ -1,7 +1,5 @@
 package lk.uok.se.Mail;
 
-//import javafx.scene.control.Alert;
-//import javafx.scene.control.ButtonType;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -42,13 +40,7 @@ public class MailSender implements MailRepository{
             message.setFrom(new InternetAddress(myEmail));
             message.setRecipient(Message.RecipientType.TO,new InternetAddress(recipiant));
             message.setSubject("Error Log Details");
-            message.setText("Your Training Contract has been registered with NAITA Colombo District office\n" +
-
-                    "A copy of certified contract document can be obtained from NAITA Havelock Town Office\n" +
-                    "Inquiries: 0112597672\n\n" +
-                    "M.R.D.A.S Gunarathna\n" +
-                    "District Manager\n" +
-                    "NAITA-Colombo");
+            message.setText(errMsg);
             return message;
         } catch (Exception e) {
             Logger.getLogger(MailSender.class.getName()).log(Level.SEVERE,null,e);

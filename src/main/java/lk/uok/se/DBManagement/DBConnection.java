@@ -1,24 +1,23 @@
 package lk.uok.se.DBManagement;
 
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
     private static DBConnection dBConnection;
-    private final Connection connection;
+    private Connection connection;
 
-    public DBConnection() throws ClassNotFoundException, SQLException {
+    private DBConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
-        connection = DriverManager.getConnection("jdbc:mysql://localhost/Emails", "root", "");
-
+        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/LogAnalyzer", "root", "1234");
     }
 
-    //configure database connection
     public static DBConnection getDBConnection() throws ClassNotFoundException, SQLException {
         if (dBConnection == null) {
             dBConnection = new DBConnection();
-            System.out.println("Successfully connected");
+            System.out.println("Database successfully connected...");
         }
         return dBConnection;
     }

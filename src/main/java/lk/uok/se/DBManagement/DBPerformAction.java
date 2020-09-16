@@ -26,7 +26,7 @@ public class DBPerformAction implements DBRepository {
     //retrieve emails
     @Override
     public ArrayList<Email> getAll() throws Exception{
-        String sql="SELECTE * from Emails";
+        String sql="SELECT * from Emails";
         ResultSet rst=DBUtility.exuteQuery(sql);
         ArrayList<Email> list=new ArrayList<>();
         while (rst.next()){
