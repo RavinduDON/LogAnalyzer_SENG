@@ -1,7 +1,7 @@
-package Main;
+package lk.uok.se.Main;
 
 import lk.uok.se.DTO.Message;
-import lk.uok.se.FileHandling.ErrorConfig;
+import lk.uok.se.ErrorConfiguration.ErrorConfig;
 import lk.uok.se.FileHandling.Filewriter;
 import lk.uok.se.FileHandling.LogReader;
 import lk.uok.se.FileHandling.TimestampReader;

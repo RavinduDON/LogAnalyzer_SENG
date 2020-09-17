@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class TimestampReader {
-    SimpleDateFormat datetimeFormatter1 = new SimpleDateFormat("yyyy-MM-ddhh:mm:ss");
+    SimpleDateFormat datetimeFormatter1 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
     Date last_error_date;
     Timestamp last_error_timestamp;
 

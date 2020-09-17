@@ -5,7 +5,7 @@ import lk.uok.se.DTO.Message;
 import java.io.FileWriter;
 import java.util.List;
 
-public class Filewriter {
+public class Filewriter implements FileWriterRepo {
 
     public void getaccesseto_file(List<Message> errormessages){
         try {

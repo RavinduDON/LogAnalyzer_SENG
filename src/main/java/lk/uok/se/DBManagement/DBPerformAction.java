@@ -10,8 +10,8 @@ public class DBPerformAction implements DBRepository {
     //add emails
     @Override
     public boolean add(Email dto) throws Exception {
-        String sql="INSERT into emails values(?,?)";
-        int executeUpdate=DBUtility.exuteUpdate(sql,dto.getId(),dto.getAddress());
+        String sql="INSERT into email (address) values(?)";
+        int executeUpdate=DBUtility.exuteUpdate(sql,dto.getAddress());
         if (executeUpdate>0){
             return true;
         }
