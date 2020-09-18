@@ -16,7 +16,6 @@ public class ErrorConfig implements ErrorConfigRepo{
     {
         TimestampReader timestampReader=new TimestampReader();
         Timestamp timestamp=timestampReader.timestampreader();
-        System.out.println(timestamp);
 
         for(Message message:messages)
         {
