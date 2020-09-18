@@ -12,7 +12,7 @@ public class Filewriter implements FileWriterRepo {
         try {
             TimestampReader timestampReader=new TimestampReader();
             Timestamp timestamp=timestampReader.timestampreader();
-            FileWriter filewriter = new FileWriter("/home/charith/Desktop/LogAnalyzer_SENG-master/src/main/resources/timestamp.txt");
+            FileWriter filewriter = new FileWriter("E:\\UniLectures\\SecondYear\\Software construction\\Assignment2\\Log_Analyzer\\src\\main\\resources\\timestamp.txt");
 
             //Print the last error date and time
             if(errormessages.isEmpty())

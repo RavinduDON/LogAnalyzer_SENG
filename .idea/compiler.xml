@@ -9,6 +9,7 @@
         <module name="LogAnalyzer_SENG" />
         <module name="LogAnalyzer" />
         <module name="git" />
+        <module name="Log_Analyzer" />
         <module name="testlog" />
         <module name="LogAnalyzer_SENG-master" />
       </profile>

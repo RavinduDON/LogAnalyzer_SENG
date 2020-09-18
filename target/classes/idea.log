@@ -439,5 +439,7 @@
 2020-01-25 17:33:12,932 [  40390]   INFO - gs.impl.UpdateCheckerComponent - channel: release 
 2020-01-25 17:33:13,713 [  41171]   INFO - ateSettings.impl.UpdateChecker - www.jetbrains.com 
 2020-01-26 16:16:51,484 [15422630]  ERROR - j.psi.stubs.StubTreeLoaderImpl - Outdated stub in index: file://C:/Users/This PC/OneDrive/Desktop/projects/University_Management_System/
-2020-01-27 16:16:51,484 [15422630]  ERROR - j.psi.stubs.StubTreeLoaderImpl - Outdated stub in index: file://C:/Users/This PC/OneDrive/Desktop/projects/University_Management_System/
-2020-01-28 16:16:51,484 [15422630]  ERROR - j.psi.stubs.StubTreeLoaderImpl - Outdated stub in index: file://C:/Users/This PC/OneDrive/Desktop/projects/University_Management_System/
+2020-01-26 16:16:51,484 [15422630]  ERROR - j.psi.stubs.StubTreeLoaderImpl - IntelliJ IDEA 2019.3.1  Build #IU-193.5662.53 
+2020-01-27 16:16:51,484 [15422630]  ERROR - j.psi.stubs.StubTreeLoaderImpl - JDK: 11.0.5; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o 
+2020-01-27 16:16:51,484 [15422630]  ERROR - j.psi.stubs.StubTreeLoaderImpl - OS: Windows 10 
+2020-01-28 16:16:51,484 [15422630]  ERROR - j.psi.stubs.StubTreeLoaderImpl - Last Action: Run 

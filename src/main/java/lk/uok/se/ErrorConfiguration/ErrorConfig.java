@@ -19,10 +19,14 @@ public class ErrorConfig implements ErrorConfigRepo{
 
         for(Message message:messages)
         {
-            if(message.getType().equals("ERROR"))
+            if(message.getType().equals("ERROR")&&timestamp!=null)
             {
                 if(message.getTimestamp().after(timestamp))
                 {
+                    errormessages.add(message);
+                }
+            }else {
+                if(message.getType().equals("ERROR")){
                     errormessages.add(message);
                 }
             }

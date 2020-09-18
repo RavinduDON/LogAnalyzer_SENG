@@ -15,14 +15,13 @@ public class TimestampReader {
     public Timestamp timestampreader()
     {
         try{
-            FileReader filereader=new FileReader("/home/charith/Desktop/LogAnalyzer_SENG-master/src/main/resources/timestamp.txt");
+            FileReader filereader=new FileReader("E:\\UniLectures\\SecondYear\\Software construction\\Assignment2\\Log_Analyzer\\src\\main\\resources\\timestamp.txt");
             Scanner scanner=new Scanner(filereader);
             last_error_date= datetimeFormatter1.parse(scanner.nextLine());
             last_error_timestamp= new Timestamp(last_error_date.getTime());
             return last_error_timestamp;
         }catch(Exception e)
         {
-            System.out.println(e);
             return null;
         }
     }
