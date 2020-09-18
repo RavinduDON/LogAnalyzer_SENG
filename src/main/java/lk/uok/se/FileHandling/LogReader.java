@@ -7,13 +7,13 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class LogReader {
+public class LogReader implements FileReaderRepo {
     private List<Message> messages=new ArrayList<Message>();
 
     public List<Message> logreader()
     {
         try{
-            FileReader filereader=new FileReader("/home/charith/Desktop/git/src/main/resources/idea.log");
+            FileReader filereader=new FileReader("/home/charith/Desktop/LogAnalyzer_SENG-master/src/main/resources/idea.log");
             Scanner scanner=new Scanner(filereader);
             while (scanner.hasNextLine())
             {
@@ -23,7 +23,7 @@ public class LogReader {
                 {
                     Message message=new Message();
                     String str=st.nextToken()+st.nextToken();
-                    SimpleDateFormat datetimeFormatter = new SimpleDateFormat("yyyy-MM-ddhh:mm:ss");
+                    SimpleDateFormat datetimeFormatter = new SimpleDateFormat("yyyy-MM-ddHH:mm:ss");
                     Date date= datetimeFormatter.parse(str);
                     Timestamp timestamp= new Timestamp(date.getTime());
                     message.setTimestamp(timestamp);

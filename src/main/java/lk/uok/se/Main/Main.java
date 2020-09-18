@@ -1,7 +1,7 @@
-package Main;
+package lk.uok.se.Main;
 
 import lk.uok.se.DTO.Message;
-import lk.uok.se.FileHandling.ErrorConfig;
+import lk.uok.se.ErrorConfiguration.ErrorConfig;
 import lk.uok.se.FileHandling.Filewriter;
 import lk.uok.se.FileHandling.LogReader;
 import lk.uok.se.FileHandling.TimestampReader;
@@ -16,13 +16,22 @@ public class Main {
         LogReader logReader=new LogReader();
         List<Message> messages=logReader.logreader();
 
+//        for(Message message:messages)
+//        {
+//            System.out.println(message.getTimestamp()+","+message.getDetail());
+//        }
+
         ErrorConfig errorConfig=new ErrorConfig();
         List<Message> errormessages=errorConfig.findingerrors(messages);
+
+        for(Message message:errormessages)
+        {
+            System.out.println(message.getTimestamp()+","+message.getDetail());
+        }
 
         Filewriter filewriter=new Filewriter();
         filewriter.getaccesseto_file(errormessages);
 
-        TimestampReader timestampReader=new TimestampReader();
-        Timestamp timestamp=timestampReader.timestampreader();
+
     }
 }
