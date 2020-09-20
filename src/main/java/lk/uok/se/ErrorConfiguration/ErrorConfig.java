@@ -7,7 +7,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ErrorConfig implements ErrorConfigRepo{
+public class  ErrorConfig implements ErrorConfigRepo{
     private List<Message> errormessages=new ArrayList<Message>();
 
 
