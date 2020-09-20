@@ -1,4 +1,4 @@
-package lk.uok.se.Mail;
+package lk.uok.se.UI;
 
 import lk.uok.se.DBManagement.DBFactory;
 import lk.uok.se.DBManagement.DBRepository;
@@ -7,6 +7,7 @@ import lk.uok.se.DTO.Message;
 import lk.uok.se.ErrorConfiguration.ErrorConfig;
 import lk.uok.se.FileHandling.Filewriter;
 import lk.uok.se.FileHandling.LogReader;
+import lk.uok.se.Mail.MailSender;
 
 import java.util.List;
 
@@ -14,6 +15,9 @@ public class SendMail {
 
     DBRepository dbRepository;
 
+    private MailSender mailSender=new MailSender();
+    private LogReader logReader=new LogReader();
+    private ErrorConfig errorConfig=new ErrorConfig();
 
 
 
@@ -22,9 +26,9 @@ public class SendMail {
     }
 
     public void sendErrMail() throws Exception {
-        MailSender mailSender=new MailSender();
-        LogReader logReader=new LogReader();
-        ErrorConfig errorConfig=new ErrorConfig();
+         mailSender=new MailSender();
+         logReader=new LogReader();
+         errorConfig=new ErrorConfig();
         StringBuilder builder=new StringBuilder("");
         List<Email> emailList=dbRepository.getAll();
         List<Message> messages=logReader.logreader();

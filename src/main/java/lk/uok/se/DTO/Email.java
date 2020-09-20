@@ -4,7 +4,7 @@ public class Email {
     private int id;
     private String address;
 
-    public Email(String id, String address) {
+    public Email() {
     }
 
     public Email(int id, String address) {

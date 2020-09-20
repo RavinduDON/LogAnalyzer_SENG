@@ -13,7 +13,7 @@ public class LogReader implements FileReaderRepo {
     public List<Message> logreader()
     {
         try{
-            FileReader filereader=new FileReader("E:\\UniLectures\\SecondYear\\Software construction\\Assignment2\\Log_Analyzer\\src\\main\\resources\\idea.log");
+            FileReader filereader=new FileReader("E:\\UniLectures\\SecondYear\\Software construction\\ttt\\src\\main\\resources\\idea.log");
             Scanner scanner=new Scanner(filereader);
             while (scanner.hasNextLine())
             {

@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="LogAnalyzer_SENG-master" />
+        <module name="LogAnalyzer_SENG" />
         <module name="git" />
         <module name="Log_Analyzer" />
-        <module name="LogAnalyzer_SENG" />
+        <module name="LogAnalyzer_SENG-master" />
         <module name="testlog" />
+        <module name="ttt" />
         <module name="LogAnalyzer" />
       </profile>
     </annotationProcessing>

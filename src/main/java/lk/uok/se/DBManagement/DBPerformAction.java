@@ -3,7 +3,7 @@ package lk.uok.se.DBManagement;
 import lk.uok.se.DTO.Email;
 
 import java.sql.ResultSet;
-import java.util.ArrayList;
+import java.util.*;
 
 public class DBPerformAction implements DBRepository {
 
@@ -25,15 +25,15 @@ public class DBPerformAction implements DBRepository {
 
     //retrieve emails
     @Override
-    public ArrayList<Email> getAll() throws Exception{
-        String sql="SELECT * from Emails";
+    public List<Email> getAll() throws Exception{
+        String sql="SELECT * from email";
         ResultSet rst=DBUtility.exuteQuery(sql);
-        ArrayList<Email> list=new ArrayList<>();
+        List<Email> list=new ArrayList<>();
         while (rst.next()){
             String id=rst.getString(1);
             String address= rst.getString(2);
 
-            Email dto1=new Email(id,address);
+            Email dto1=new Email(Integer.parseInt(id),address);
             list.add(dto1);
         }
         return list;

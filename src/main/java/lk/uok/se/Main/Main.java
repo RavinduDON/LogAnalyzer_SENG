@@ -5,33 +5,37 @@ import lk.uok.se.ErrorConfiguration.ErrorConfig;
 import lk.uok.se.FileHandling.Filewriter;
 import lk.uok.se.FileHandling.LogReader;
 import lk.uok.se.FileHandling.TimestampReader;
+import lk.uok.se.Mail.MailSender;
+import lk.uok.se.UI.SendMail;
 
 import java.sql.Timestamp;
 import java.util.List;
 
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-        LogReader logReader=new LogReader();
-        List<Message> messages=logReader.logreader();
+//        LogReader logReader=new LogReader();
+//        List<Message> messages=logReader.logreader();
 
 //        for(Message message:messages)
 //        {
 //            System.out.println(message.getTimestamp()+","+message.getDetail());
 //        }
 
-        ErrorConfig errorConfig=new ErrorConfig();
-        List<Message> errormessages=errorConfig.findingerrors(messages);
+//        ErrorConfig errorConfig=new ErrorConfig();
+//        List<Message> errormessages=errorConfig.findingerrors(messages);
+//
+//        for(Message message:errormessages)
+//        {
+//            System.out.println(message.getTimestamp()+","+message.getDetail());
+//        }
+//
+//        Filewriter filewriter=new Filewriter();
+//        filewriter.getaccesseto_file(errormessages);
 
-        for(Message message:errormessages)
-        {
-            System.out.println(message.getTimestamp()+","+message.getDetail());
-        }
-
-        Filewriter filewriter=new Filewriter();
-        filewriter.getaccesseto_file(errormessages);
-
+        SendMail sendMail=new SendMail();
+        sendMail.sendErrMail();
 
     }
 }
