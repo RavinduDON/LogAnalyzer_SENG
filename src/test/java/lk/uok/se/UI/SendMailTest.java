@@ -19,7 +19,7 @@ import static org.junit.Assert.*;
 public class SendMailTest {
 
     @Test
-    public void Should_Send_Email_From_ErrorConfig() throws ParseException {
+    public void Should_Send_Email_From_ErrorConfig() throws Exception {
         MailSender mailSender=mock(MailSender.class);
         LogReader logReader=mock(LogReader.class);
         ErrorConfig errorConfig=mock(ErrorConfig.class);
@@ -84,7 +84,11 @@ public class SendMailTest {
         message.setDetail("j.psi.stubs.StubTreeLoaderImpl - Outdated stub in index: file://C:/Users/This PC/OneDrive/Desktop/projects/University_Management_System/");
         messageList.add(message);
 
-        when()
+        when(logReader.logreader()).thenReturn(messageList);
+
+        SendMail sendMail=new SendMail();
+        sendMail.sendErrMail();
+
 
 
     }
