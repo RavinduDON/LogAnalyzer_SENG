@@ -25,6 +25,12 @@ public class SendMail {
         dbRepository= DBFactory.getDbFactory().getDBrepository(DBFactory.DBFactoryTypes.email);
     }
 
+    public SendMail(MailSender mailSender, LogReader logReader, ErrorConfig errorConfig) {
+        this.mailSender = mailSender;
+        this.logReader = logReader;
+        this.errorConfig = errorConfig;
+    }
+
     public void sendErrMail() throws Exception {
          mailSender=new MailSender();
          logReader=new LogReader();
