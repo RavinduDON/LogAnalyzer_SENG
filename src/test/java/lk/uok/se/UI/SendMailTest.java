@@ -84,7 +84,7 @@ public class SendMailTest {
         message.setDetail("j.psi.stubs.StubTreeLoaderImpl - Outdated stub in index: file://C:/Users/This PC/OneDrive/Desktop/projects/University_Management_System/");
         messageList.add(message);
 
-
+        when()
 
 
     }
